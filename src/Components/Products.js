@@ -41,6 +41,10 @@ export const Products = () => {
     return <h1>LOADING</h1>
   }
 
+  if (status === STATUSES.ERROR) {
+    return <h2>Something went wrong!</h2>;
+}
+
   return (
     <div>
        <div className='container'>
