@@ -46,8 +46,9 @@ export default productSlice.reducer;
 
 
 export const fetchProducts = createAsyncThunk('products/fetch', async () => {
-    const res =  await axios.get('https://fakestoreapi.com/products')
-    return res.data;
+    return  await axios.get('https://fakestoreapi.com/products').then(res=>{
+        return res.data;
+    })
 })
     
 // export const fetchProducts = createAsyncThunk('products/fetch', async () => {

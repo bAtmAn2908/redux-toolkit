@@ -1,11 +1,10 @@
 import React ,{useState,useEffect} from 'react'
 import axios from 'axios'
-import { maxHeight } from '@mui/system';
-import { Height } from '@mui/icons-material';
 import { add, remove } from '../Store/cartSlice';
 import { useDispatch,useSelector } from 'react-redux';
 import { fetchProducts } from '../Store/productSlice';
 import { STATUSES } from '../Store/productSlice';
+import './Products.css';
 
 export const Products = () => {
 
@@ -38,7 +37,7 @@ export const Products = () => {
   }
 
   if (status === STATUSES.LOADING){
-    return <h1>LOADING</h1>
+    return <h1>Loader</h1>
   }
 
   if (status === STATUSES.ERROR) {
@@ -55,7 +54,7 @@ export const Products = () => {
               <div className='col-sm-6 col-md-4 col-lg-3'>
 
              
-            <div class="card h-100" >
+            <div class="card h-100" key={items.id} >
             <img src={items.image} class="card-img-top" alt="..." style={{maxHeight:350}}></img>
             <div class="card-body">
     <h5 class="card-title">{items.title}</h5>
