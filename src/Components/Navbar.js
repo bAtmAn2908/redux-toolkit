@@ -8,7 +8,7 @@ export const Navbar = () => {
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-  <Link class="navbar-brand" to='/'>Redux Store</Link>
+  <Link class="navbar-brand" to='/'>Rakun Store</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
