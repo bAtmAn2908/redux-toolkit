@@ -4,7 +4,8 @@ import { add, remove } from '../Store/cartSlice';
 import { useDispatch,useSelector } from 'react-redux';
 import { fetchProducts } from '../Store/productSlice';
 import { STATUSES } from '../Store/productSlice';
-import './Products.css';
+import  loader from './loader.gif';
+
 
 export const Products = () => {
 
@@ -37,7 +38,7 @@ export const Products = () => {
   }
 
   if (status === STATUSES.LOADING){
-    return <h1>Loader</h1>
+    return <img alt='' src={loader} style={{marginTop:100,justifyContent:'center',alignItems:'center'}} className='img-fluid' ></img>
   }
 
   if (status === STATUSES.ERROR) {
